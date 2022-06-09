@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Identity</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <section class="header">
+      <header>
+        <div class="container">
+          <div class="navbar flex1">
+            <div class="logo">
+              <img src="images/logo.png" alt="logo" />
+
+            </div>
+            <nav>
+                <ul id="menuitems">
+                  <li>  
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>  
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>  
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>  
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>  
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>  
+                    <a href="index.html">Home</a>
+                  </li>
+
+                </ul>
+                <button>
+                  Get Started
+                </button>
+            </nav>
+            <span class="fa fa-bars" onclick="menutoggle()"></span>
+          </div>
+        </div>
+      </header>
+    </section>
+    <script>
+      var menuitem=document.getElementById("menuitems");
+      menuitem.style.maxHeight="0px";
+
+      function menutoggle( ){
+        if(menuitem.style.maxHeight=="0px"){
+          menuitem.style.maxHeight="500px";
+        }
+        else{
+          menuitem.style.maxHeight="0px";
+        }
+      }
+
+      window.addEventListener("scroll",function(){
+       var header=document.querySelector("header")
+       header.classList.toggle("sticky",window.scrollY>50)
+      })
+    </script>
+  </body>
+</html>
